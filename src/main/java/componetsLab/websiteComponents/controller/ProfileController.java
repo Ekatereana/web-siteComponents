@@ -94,7 +94,7 @@ public class ProfileController {
     }
 
     @GetMapping("/change-visit")
-    public ModelAndView cnangeVisitGet(@RequestParam("id") long id){
+    public ModelAndView changeVisitGet(@RequestParam("id") long id){
         ModelAndView view = new ModelAndView("action/change");
         view.addObject("user", userService.getCurrentUser());
         view.addObject("visit", visitService.getById(id));
