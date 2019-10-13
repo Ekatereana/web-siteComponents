@@ -2,7 +2,7 @@ package componetsLab.websiteComponents.entity;
 
 import componetsLab.websiteComponents.entity.Visit;
 import componetsLab.websiteComponents.entity.enumeration.UserRole;
-import jdk.nashorn.internal.runtime.Specialization;
+
 import lombok.Data;
 
 import javax.persistence.*;

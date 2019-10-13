@@ -8,7 +8,6 @@ import componetsLab.websiteComponents.entity.enumeration.Status;
 import componetsLab.websiteComponents.entity.enumeration.UserRole;
 import componetsLab.websiteComponents.service.UserService;
 import componetsLab.websiteComponents.service.VisitService;
-import lombok.Lombok;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,7 +50,7 @@ public class ProfileController {
                     break;
             }
         } else {
-            view = new ModelAndView("security/register-login");
+            view = new ModelAndView("security/register.html");
 
         }
 
