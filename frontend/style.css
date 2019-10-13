@@ -1,0 +1,41 @@
+.patient {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.patient img{
+	width: 200px;
+	height: 200px;
+}
+
+.info {
+	margin: 0 10px 0 10px;
+	align-self: center;
+}
+
+a:hover {
+	font-size: 18px;
+}
+
+.patient-main {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
