@@ -39,3 +39,23 @@ a:hover {
 
 
 
+.treatment_and_receipt{
+	position: absolute;
+	z-index: 5;
+	width: 500px;
+	height: 250px;
+	text-align: center;
+	background: cornsilk;
+	visibility: hidden;
+}
+
+
+.bill_and_price{
+		position: absolute;
+	z-index: 5;
+	width: 500px;
+	height: 250px;
+	text-align: center;
+	background: cornsilk;
+	visibility: hidden;
+}
