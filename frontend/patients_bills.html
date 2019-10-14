@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <!-- saved from url=(0100)file:///Users/inidzelsky/Study/Components%20of%20the%20software%20engineering/frontend/patient.html? -->
 <html>
-  <head>
+
+<head>
   <link rel="stylesheet" href="assets/styles/App.css">
   <link rel="stylesheet" href="assets/styles/style.css">
   <script src="https://kit.fontawesome.com/1dc80494d8.js" crossorigin="anonymous"></script>
   <script src="assets/scripts/patient.js"></script>
   <title>Patient`s page</title>
 </head>
+
 <body>
-  <div class="treatment_and_receipt">
+  <div class="bill_and_price">
     <p>Thre treatment</p>
-    <button onclick="hideTreatment()">Hide</button>
+    <p>The bill</p>
+    <ul>
+      <li>Томограф</li>
+      <li>Рентген</li>
+      <li>Еще че то</li>
+    </ul>
+    <p>The price</p>
+    <p>2000$</p>
+    <form action="">
+      <button onclick="">Pay via Privat24</button>
+    </form>
+    <button onclick="hideBill()">Hide</button>
   </div>
   <div class="navbar bg-primary">
     <h1><i class="fas fa-notes-medical"> Clinic System</i></h1>
-      <ul>
-        <li><a href="patients_bills.html">Bills</a></li>
-        <li><a href="patient.html">Visits</a></li>  
-        <li><a href="">Settings</a></li>
-        <li><a href="">Log out</a></li>
-      </ul>
+    <ul>
+      <li><a href="patients_bills.html">Bills</a></li>
+      <li><a href="patient.html">Visits</a></li>
+      <li><a href="">Settings</a></li>
+      <li><a href="">Log out</a></li>
+    </ul>
   </div>
 
   <div class="patient-main">
     <div class="profile container card bg-white patient">
-        <label>Profile name</label>
-        <div class="picture">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjgxTZlAl9nERPPBwHN_Wjxp1m9QExCe-faArtPjgP3Axiiw-w">
-        </div>
+      <label>Profile name</label>
+      <div class="picture">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjgxTZlAl9nERPPBwHN_Wjxp1m9QExCe-faArtPjgP3Axiiw-w">
+      </div>
 
-        <div class="container">
-          <form>
-            <input type="text" placeholder="What happened?">
-            <select name="doctors" id="">
-              <option value="">Bean</option>
-              <option value="">Sins</option>
-            </select>
-            <label for="doctors">Select the doctor</label>
-            <br>
-            <label for="">When want you to come?</label>
-            <input type="date" name="date" id="">
-            <input type="submit" value="Send">
-         </form>
+      <div class="container">
+        <form>
+          <input type="text" placeholder="What happened?">
+          <select name="doctors" id="">
+            <option value="">Bean</option>
+            <option value="">Sins</option>
+          </select>
+          <label for="doctors">Select the doctor</label>
+          <br>
+          <label for="">When want you to come?</label>
+          <input type="date" name="date" id="">
+          <input type="submit" value="Send">
+        </form>
       </div>
     </div>
 
     <div class="treatment container">
       <div class="card bg-light patient">
         <div class="picture">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbj09nbCchBhYF6AJAD0n-NgmlzgzedZDy75ryZl2F12afhqZV">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbj09nbCchBhYF6AJAD0n-NgmlzgzedZDy75ryZl2F12afhqZV">
         </div>
         <div class="info">
           <ul class="list">
@@ -63,8 +78,8 @@
         </div>
         <div class="buttons">
           <div>
-            <button class="btn btn-block btn-success" onclick="showTreatment()">
-              Look at the treatment
+            <button class="btn btn-block btn-success" onclick="showBill()">
+              Show the bill
             </button>
           </div>
           <div>
@@ -91,8 +106,8 @@
         </div>
         <div class="buttons">
           <div>
-            <button class="btn btn-block btn-success">
-              Look at the treatment
+            <button class="btn btn-block btn-success" onclick="showBill()">
+              Show the bill
             </button>
           </div>
           <div>
@@ -106,4 +121,5 @@
   </div>
 
 </body>
+
 </html>
