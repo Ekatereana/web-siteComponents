@@ -1,13 +1,11 @@
 package componetsLab.websiteComponents.entity;
 
 import componetsLab.websiteComponents.entity.enumeration.Status;
+import componetsLab.websiteComponents.entity.enumeration.UserRole;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Data
@@ -26,6 +24,9 @@ public class Visit {
     @JoinTable(name="user_visit", joinColumns=@JoinColumn(name = "visit_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     private Set<User> users = new HashSet<>();
 
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "confirmation")
     private Boolean confirmation;
 
@@ -41,6 +42,30 @@ public class Visit {
 
     public void addUser(User user){
         users.add(user);
+    }
+
+    public User getPatient(){
+        Iterator<User> iterator = users.iterator();
+        User user;
+        while (iterator.hasNext()){
+            user = iterator.next();
+            if(user.getUserRole().equals(UserRole.PATIENT)){
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public User getDoctor(){
+        Iterator<User> iterator = users.iterator();
+        User user;
+        while (iterator.hasNext()){
+            user = iterator.next();
+            if(user.getUserRole().equals(UserRole.DOCTOR)){
+                return user;
+            }
+        }
+        return null;
     }
 
     @Override

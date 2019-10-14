@@ -57,16 +57,54 @@ public class ProfileController {
         return view;
     }
 
+    @PostMapping("/login")
+    public ModelAndView postLogin(@RequestParam(value = "email") String email,
+                                  @RequestParam(value = "password") String password) {
+        ModelAndView view = new ModelAndView("security/login");
+        User user = userService.getByEmail(email);
+        if (user == null) {
+            view.addObject("error", Error.NON_EMAIL.disc);
+        } else {
+            if (!user.getPassword().equals(password)) {
+                view.addObject("error", Error.CHANCE_PASS.disc);
+            } else {
+                if (email.startsWith("clinicKPI2019")) {
+                    view = new ModelAndView("doctor");
+                    if(user.getVisits().size()!=0){
+                        view.addObject("visits", user.getVisits());
+                    }
+                    else {
+                        view.addObject("visits", null);
+                    }
+                } else {
+                    view = new ModelAndView("patient");
+                    if(user.getVisits().size()!=0){
+                        view.addObject("visits", user.getVisits());
+                    }
+                    else {
+                        view.addObject("visits", null);
+                    }
+                }
+                view.addObject("u", user);
+            }
+
+        }
+        return view;
+
+    }
+
     @GetMapping("/login")
-    public ModelAndView getLogon(){
-        return new ModelAndView("security/login");
+    public ModelAndView getLogon(@RequestParam(value = "error", required = false) String error) {
+        ModelAndView view = new ModelAndView("security/login");
+        view.addObject("error", error);
+        return view;
     }
 
     @GetMapping("/register")
-    public ModelAndView getRegister(@RequestParam(value = "error", required = false) Error error) {
+    public ModelAndView getRegister(@RequestParam(value = "error", required = false) String error) {
         ModelAndView result = new ModelAndView("security/register");
         if (error != null) {
-            result.addObject("error", error.disc);
+            result.addObject("error", error);
         }
         return result;
     }
@@ -80,7 +118,7 @@ public class ProfileController {
                                      @RequestParam(value = "password1") String passOne,
                                      @RequestParam(value = "password2") String passTwo) {
         ModelAndView view = null;
-        if (userService.getByEmail(email)!=null) {
+        if (userService.getByEmail(email) != null) {
             view = new ModelAndView("security/register");
             view.addObject("error", Error.IS_EMAIL.disc);
 
@@ -93,10 +131,9 @@ public class ProfileController {
                     user.setEmail(email);
                     user.setName(name);
                     user.setLastName(lastName);
-                    if(insurance.equals("on")){
+                    if (insurance.equals("on")) {
                         user.setInsurance(true);
-                    }
-                    else {
+                    } else {
                         user.setInsurance(false);
                     }
                     userService.addNewPatient(user);
@@ -116,8 +153,9 @@ public class ProfileController {
 
     }
 
-    private enum Error{
+    private enum Error {
         NON_PASS("The passwords are not equal. Retype the password"),
+        CHANCE_PASS("Invalid password, retype it"),
         NON_EMAIL("Invalid email, retype it"),
         IS_EMAIL("This email is already taken. Please use different one.");
 

@@ -5,8 +5,8 @@
   --primary-color: #003699;
   --dark-color: #333333;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --danger-color: #1E90FF;
+  --success-color: #87CEFA;
 }
 
 * {
@@ -94,7 +94,7 @@ img {
 .card {
   padding: 1rem;
   border: #ccc 1px dotted;
-  margin: 0.7rem 0;
+  margin: 0.7rem;
 }
 
 /* List */
@@ -216,7 +216,9 @@ img {
 .bg_alert{
   font-size:  120%;
   background-color: #87CEFA;
-  border-radius: 5%;
+  border-radius: 10%;
+  border-width: 3px;
+  border-color: var(--primary-color); 
   text-align:   center; 
   margin-right: 20%;
   margin-left:20%;  

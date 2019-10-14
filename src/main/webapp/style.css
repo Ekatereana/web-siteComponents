@@ -1,3 +1,6 @@
+
+
+
 .patient {
 	display: flex;
 	flex-direction: row;
@@ -11,11 +14,17 @@
 }
 
 .patient img{
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
+	margin: 0 10px 0 10px;
+	align-self: center;
 }
 
-.info {
+.picture{
+	width: 150px;
+	height: 150px;
+	border-color:  var(--primary-color);
+	border-width: 1px;
 	margin: 0 10px 0 10px;
 	align-self: center;
 }
@@ -24,16 +33,21 @@ a:hover {
 	font-size: 18px;
 }
 
+.card-wd{
+	 min-width: 700px;
+	 min-height: 250px;
+}
+
 .patient-main {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	justify-content: 	space-around;	
+	margin: 3%;
 }
 
 .profile {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
 }
 
