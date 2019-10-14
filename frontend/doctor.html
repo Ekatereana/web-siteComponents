@@ -5,8 +5,18 @@
 		<link rel="stylesheet" href="assets/styles/App.css">
 		<link rel="stylesheet" href="assets/styles/style.css">
 		<script src="https://kit.fontawesome.com/1dc80494d8.js" crossorigin="anonymous"></script>
+		<script src="assets/scripts/doctor.js"></script>
 	</head>
 	<body>
+		<div class="patients_tratment">
+			<form action="">
+				<label for="">Patients diagnosis</label>
+				<input type="text">
+				<label for="">His Treament and reciept</label>
+				<textarea name="" id="" cols="1" rows="4"></textarea>
+				<button onclick="tratmentSend()">Submit and send</button>
+			</form>
+		</div>
 		<div class='navbar bg-primary'>
 			<h1><i class="fas fa-notes-medical"> Clinic System</i></h1>
 			<div class='menu'>
@@ -30,7 +40,7 @@
 				</ul>
 				</div>
 				<div class='buttons'>
-					<button class='btn btn-block btn-success'>Write Treatment</button>
+					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
 					<button class='btn btn-block btn-dark'>Send to another</button>
 					<button class='btn btn-block btn-danger'>Ban</button>
 				</div>
@@ -46,7 +56,7 @@
 					</ul>
 				</div>
 				<div class='buttons'>
-					<button class='btn btn-block btn-success'>Write Treatment</button>
+					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
 					<button class='btn btn-block btn-dark'>Send to another</button>
 					<button class='btn btn-block btn-danger'>Ban</button>
 				</div>
@@ -62,7 +72,7 @@
 					</ul>
 				</div>
 				<div class='buttons'>
-					<button class='btn btn-block btn-success'>Write Treatment</button>
+					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
 					<button class='btn btn-block btn-dark'>Send to another</button>
 					<button class='btn btn-block btn-danger'>Ban</button>
 				</div>
@@ -78,7 +88,7 @@
 					</ul>
 				</div>
 				<div class='buttons'>
-					<button class='btn btn-block btn-success'>Write Treatment</button>
+					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
 					<button class='btn btn-block btn-dark'>Send to another</button>
 					<button class='btn btn-block btn-danger'>Ban</button>
 				</div>

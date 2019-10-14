@@ -59,3 +59,16 @@ a:hover {
 	background: cornsilk;
 	visibility: hidden;
 }
+
+
+
+.patients_tratment{
+			position: absolute;
+	z-index: 5;
+	width: 500px;
+	height: 250px;
+	text-align: center;
+	background: cornsilk;
+	padding: 5px;
+	visibility: hidden;
+}
