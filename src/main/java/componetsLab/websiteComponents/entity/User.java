@@ -1,8 +1,8 @@
 package componetsLab.websiteComponents.entity;
 
 import componetsLab.websiteComponents.entity.Visit;
+import componetsLab.websiteComponents.entity.enumeration.Specializations;
 import componetsLab.websiteComponents.entity.enumeration.UserRole;
-
 import lombok.Data;
 
 import javax.persistence.*;
@@ -31,9 +31,12 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "insurance")
+    private Boolean insurance=false;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "specialization")
-    private Specialization specialization;
+    private Specializations specialization;
 
     @Enumerated(EnumType.STRING)
     @Column(name="user_role")

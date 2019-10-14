@@ -3,10 +3,9 @@ package componetsLab.websiteComponents.service;
 import componetsLab.websiteComponents.entity.User;
 import componetsLab.websiteComponents.entity.enumeration.UserRole;
 import componetsLab.websiteComponents.repository.UserRepository;
-import componetsLab.websiteComponents.security.SecurityProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,11 +17,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private SecurityProcessor securityProcessor;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User getByEmail(String email) {
         return userRepository.getUserByEmail(email);
@@ -46,13 +41,10 @@ public class UserService {
     }
 
     public void setPassword(User user, String password) {
-        String passwordHash = bCryptPasswordEncoder.encode(password);
-        user.setPassword(passwordHash);
+        user.setPassword(password);
     }
 
-    public User getCurrentUser() {
-        String currentUserEmail = securityProcessor.getCurrentUserEmail();
-
+    public User getCurrentUser(String currentUserEmail) {
         if (currentUserEmail == null) {
             return null;
 

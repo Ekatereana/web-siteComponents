@@ -213,6 +213,17 @@ img {
   margin-right: 0.2rem;
 }
 
+.bg_alert{
+  font-size:  120%;
+  background-color: #87CEFA;
+  border-radius: 5%;
+  text-align:   center; 
+  margin-right: 20%;
+  margin-left:20%;  
+
+
+ }
+
 .badge {
   font-size: 0.8rem;
   padding: 0.2rem 0.7rem;

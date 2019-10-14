@@ -2,7 +2,15 @@ package componetsLab.websiteComponents.entity.enumeration;
 
 public enum Specializations {
     DENTIST("dentist"),
-    NEUROLOGIST("neurologist");
+    NEUROLOGIST("neurologist"),
+    SURGEON("surgeon"),
+    UROLOGIST("urologist"),
+    PSYCHIATRIST("psychiatrist"),
+    OTOLATYNGOLOGIST("otolaryngologist"),
+    OBSTETRICIAN("obstetrician"),
+    DERMATOLOGIST("dermatologist"),
+    CARDIOLOGIST("cardiologist"),
+    GYNECOLOGISR4("gynecologist");
 
     private String description;
 
