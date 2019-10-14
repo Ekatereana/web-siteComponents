@@ -51,7 +51,7 @@ a:hover {
 
 
 .bill_and_price{
-		position: absolute;
+	position: absolute;
 	z-index: 5;
 	width: 500px;
 	height: 250px;
@@ -62,11 +62,34 @@ a:hover {
 
 
 
-.patients_tratment{
-			position: absolute;
+.patients_treatment{
+	position: absolute;
 	z-index: 5;
 	width: 500px;
 	height: 250px;
+	text-align: center;
+	background: cornsilk;
+	padding: 5px;
+	visibility: hidden;
+}
+
+.another_doc{
+	position: absolute;
+	z-index: 5;
+	width: 500px;
+	height: 250px;
+	text-align: center;
+	background: cornsilk;
+	padding: 5px;
+	visibility: hidden;
+}
+
+
+.ban_user{
+	position: absolute;
+	z-index: 5;
+	width: 400px;
+	height: 200px;
 	text-align: center;
 	background: cornsilk;
 	padding: 5px;

@@ -8,13 +8,27 @@
 		<script src="assets/scripts/doctor.js"></script>
 	</head>
 	<body>
-		<div class="patients_tratment">
+		<div class="patients_treatment">
 			<form action="">
 				<label for="">Patients diagnosis</label>
 				<input type="text">
 				<label for="">His Treament and reciept</label>
 				<textarea name="" id="" cols="1" rows="4"></textarea>
 				<button onclick="tratmentSend()">Submit and send</button>
+			</form>
+		</div>
+		<div class="another_doc">
+			<form action="">
+				<label for="">Which one?</label>
+				<input type="text">
+				<button onclick="toDocSend()">Send</button>
+			</form>
+		</div>
+		<div class="ban_user">
+			<form action="">
+				<label for="">Enter the reason:</label>
+				<input type="text">
+				<button onclick="Report()">Report</button>
 			</form>
 		</div>
 		<div class='navbar bg-primary'>
@@ -41,8 +55,8 @@
 				</div>
 				<div class='buttons'>
 					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
-					<button class='btn btn-block btn-dark'>Send to another</button>
-					<button class='btn btn-block btn-danger'>Ban</button>
+					<button class='btn btn-block btn-dark' onclick="openDocSend()">Send to another</button>
+					<button class='btn btn-block btn-danger' onclick="showBanWindow()">Ban</button>
 				</div>
 			</div>
 			<div class='card bg-light patient'>
@@ -57,8 +71,8 @@
 				</div>
 				<div class='buttons'>
 					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
-					<button class='btn btn-block btn-dark'>Send to another</button>
-					<button class='btn btn-block btn-danger'>Ban</button>
+					<button class='btn btn-block btn-dark' onclick="openDocSend()">Send to another</button>
+					<button class='btn btn-block btn-danger' onclick="showBanWindow()">Ban</button>
 				</div>
 			</div>
 			<div class='card bg-light patient'>
@@ -73,8 +87,8 @@
 				</div>
 				<div class='buttons'>
 					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
-					<button class='btn btn-block btn-dark'>Send to another</button>
-					<button class='btn btn-block btn-danger'>Ban</button>
+					<button class='btn btn-block btn-dark' onclick="openDocSend()">Send to another</button>
+					<button class='btn btn-block btn-danger' onclick="showBanWindow()">Ban</button>
 				</div>
 			</div>
 			<div class='card bg-light patient'>
@@ -89,8 +103,8 @@
 				</div>
 				<div class='buttons'>
 					<button class='btn btn-block btn-success' onclick="openTratment()">Write Treatment</button>
-					<button class='btn btn-block btn-dark'>Send to another</button>
-					<button class='btn btn-block btn-danger'>Ban</button>
+					<button class='btn btn-block btn-dark' onclick="openDocSend()">Send to another</button>
+					<button class='btn btn-block btn-danger' onclick="showBanWindow()">Ban</button>
 				</div>
 			</div>
 		</div>
